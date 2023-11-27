@@ -1,0 +1,57 @@
+#conteudo {
+    min-height: 79.3vh;
+}
+.container{
+    top: 4.4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.titulo-telas {
+    margin-right: 41vw;
+    width: 11vw;
+    height: 4vh;
+    color: #FFF;
+    text-align: center;
+    align-content: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 10px;
+    border: 5px solid #476576;
+    background: #82A1B3;
+}
+
+.conteudo-telas {
+    /* margin-top: 4vh; */
+    top: 1vh;
+    justify-content: center;
+    width: 50vw;
+    height: 50vh;
+    margin-left: 8vw;
+    margin-right: 10vw;
+    border: 4px solid #4E6C7D;
+    background: #FEFFFF;
+    text-align: center;
+    position: relative;
+}
+
+
+.texto-telas {
+    padding-left: 6rem;
+    padding-top: 1rem;
+    text-align: justify;
+    width: 800px;
+    height: 161px;
+    flex-shrink: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.retangulo {
+    height: 29.25vh;
+    border: 4px solid #476576;
+    background: #82A1B3;
+}

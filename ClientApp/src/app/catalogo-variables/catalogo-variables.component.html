@@ -1,0 +1,45 @@
+<mat-card class="product-border" [style.border]="CorBorda" style="padding: 0px;margin: 0;">
+  <mat-card-header class="product-header" style="height: 32px;align-items: center;" [style.background]="CorPrincipal">
+    <mat-card-title-group>
+      <input type="text" class="product-input" [style.font-size]="headerFontSize"
+        placeholder="Digite o nome do produto..." />
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content style="padding: 10px">
+    <div class="row">
+      <div class="col-6">
+        <app-image-upload [index]="index" [height]="heightCard" [maxHeight]="heightCardValue"
+          (fileSelected)="onFileSelected($event)"></app-image-upload>
+      </div>
+      <div class="col-6" #cardValue>
+        <div class="product-border product-price" [style.border]="CorComplementar" [style.background]="CorPrincipal"
+          style="text-align: center;" [style.width]="widthCard">
+          <h4>Oferta</h4>
+          <div class="old-product-price">
+            <div class="row old-product-price-box" [style.background]="CorComplementar" style="align-items: center;">
+              <div class="col-2 old-product-price " [style.font-size]="smallFontSize"[style.background]="CorComplementar"
+                style="padding: 0;">&nbsp;&nbsp;R$ </div>
+              <div class="col-6"><input class="old-product-price product-input" [style.background]="CorComplementar"
+                  [style.width]="widthValuePromo" [style.font-size]="smallFontSize"
+                  style="line-height: 0 !important;text-decoration: line-through;" min="0" max="999" type="number"
+                  placeholder="0,00"></div>
+              <div class="col-4"><input name="un" class="old-product-price product-input"
+                [style.background]="CorComplementar" [style.width]="widthUnPromo" type="text"
+                  [style.font-size]="smallUnFontSize" placeholder="un"></div>
+            </div>
+          </div>
+          <div class="preco-oferta">
+            <div class="row" style="align-items: center;">
+              <div class="col-2 " [style.font-size]="bigFontSize" style="padding: 0;">R$ </div>
+              <div class="col-6"><input class="product-input " [style.width]="widthValue"
+                  [style.font-size]="bigFontSize" min="0" type="number" style="line-height: 0 !important;"
+                  placeholder="0,00"></div>
+              <div class="col-4"><input name="un" class="product-input" [style.width]="widthUn" type="text"
+                  [style.font-size]="bigUnFontSize" placeholder="un"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

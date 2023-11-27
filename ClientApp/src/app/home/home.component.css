@@ -1,0 +1,121 @@
+
+.container{
+
+    /* height: 25vh;
+    width: 70vw;
+    margin-bottom: 4vh; */
+    display: flex;
+    justify-content: center;
+    /* width:70vw;  */
+    height:47vh;
+    border-right: 5px solid #476576;
+    position: relative;
+    max-width: 100%;
+}
+
+#conteudo{
+    flex: 1;
+}
+
+#DivDescricao{
+    background-color: rgba(130,161,179);
+    margin-top: 40vh;
+    height: 40vh;
+}
+#DivBox{
+    display: flex;
+}
+div[name="BoxDescricao"]{
+    display: inline;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(95, 120, 134);
+}
+
+.bottom-container{
+    background-color: #82A1B3;
+    border-right: 5px solid #476576;
+    border-top: 5px solid #476576;
+}
+
+.list-front-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    position: relative;
+    top: -40px;
+}
+
+.saiba-mais{
+    width: 50%;
+}
+
+.item-button{
+    background-color: #82A1B3;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 65px;
+    border: 5px solid #476576;
+    line-height: 18px;
+}
+a{
+    text-decoration: none;
+}
+.item-button:hover{
+    text-shadow: 2px 2px #476576;
+    box-shadow: 2px 2px 2px 1px #ffffff;
+    transition: .3s ease-in-out;
+}
+.create{
+    height:33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt-add{
+    width: 250px;
+}
+
+.lb-bt-add{
+    width: 300px;
+    position: relative;
+    left: 7em;
+    top: -2.5em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.descricao{
+    color: #FFFFFF;
+    font-size: 20px;
+    text-shadow: 2px 2px #476576;
+    font-weight: bold;
+}
+
+@media (max-width: 991px){
+    .container{
+        width: 90vw;
+        height: 40vh;
+        border-right: none;
+    }
+
+
+    .descricao{
+        font-size: 16px;
+    }
+
+    .lb-bt-add{
+        left: 3em;
+    }
+
+    .bt-add{
+        width: max(25vw, 200px);
+    }
+}

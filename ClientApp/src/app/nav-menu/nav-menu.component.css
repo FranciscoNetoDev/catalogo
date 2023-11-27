@@ -1,0 +1,50 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+} 
+
+.nav-link{
+  color: #ffff;
+}
+
+html {
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.navbar{
+  border-right: 5px solid #476576;
+  border-bottom: 5px solid #476576;
+}
+.navbar-nav{
+  display: flex;
+  gap: 1em;
+  text-shadow: 2px 2px #476576;
+}
+.nav-item :hover{
+color: #476576;
+text-shadow: -1px -1px #ffffff;
+}
+
+
+/* 991px fica fudido na responsividade */
+@media screen and (max-width: 991px){
+  .navbar-nav{
+    display: none;
+  }
+
+}
+
+.navbar-toggler{
+  border: 3.5px solid #476576;
+
+}

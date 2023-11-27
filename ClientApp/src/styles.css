@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+* {
+  font-family: 'Press Start 2P';
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.itens-list {
+  width: 500px;
+  max-width: 100%;
+  border:none;
+  min-height: 60px;
+  display: block;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.element-box-workspace {
+  width: 80%;
+  border: solid 1px #ccc;
+  display: block;
+  background: white;
+  border-radius: 4px;
+  overflow-y: none;
+  overflow-x: none;
+  margin: 15px;
+  margin-left: 15vw;
+  position: relative;
+}
+
+@media (max-width: 1366px) {
+  .element-box-workspace {
+    width: 70%;
+    border: solid 1px #ccc;
+    display: block;
+    background: white;
+    border-radius: 4px;
+    overflow-y: none;
+    overflow-x: none;
+    margin: 15px;
+    margin-left: 300px;
+    position: relative;
+  }
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.itens-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-custom-placeholder {
+  background: #ccc;
+  border: dotted 3px #999;
+  min-height: 60px;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+header {
+  background: #F5F5F5;
+  margin: 0;
+  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #fff;
+  height: 12vh;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+  .helper
+
+{
+  background: rgba(0, 0, 0, 0.2);
+  color: #F5F5F5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 1.2em 2em;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  span
+
+{
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 0.4em;
+  display: block;
+}
+
+}
+}
+
+.menu {
+  background: #82A1B3;
+  width: 10vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  overflow-y: none;
+  outline: none;
+  margin-top: 11.9vh;
+  min-width: 200px;
+  ul
+
+{
+  list-style: none;
+  padding: 0.5em 0;
+  margin: 0;
+  background-color: #82A1B3;
+  li
+
+{
+  padding: 0.5em 1em 0.5em 3em;
+  background-color: #82A1B3;
+  width: 30vw;
+  font-size: 0.95em;
+  font-weight: regular;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: auto 20vh;
+  transition: all 0.15s linear;
+  cursor: pointer;
+  &.icon-dashboard
+
+{
+  background-image: url("http://www.entypo.com/images/gauge.svg");
+}
+
+&.icon-customers {
+  background-image: url("http://www.entypo.com/images/briefcase.svg");
+}
+
+&.icon-users {
+  background-image: url("http://www.entypo.com/images/users.svg");
+}
+
+&.icon-settings {
+  background-image: url("http://www.entypo.com/images/tools.svg");
+}
+
+&:hover {
+  background-color: rgba(255, 255, 255);
+}
+
+&:focus {
+  outline: none;
+}
+
+}
+}
+}
+
+.element-box {
+  background-color: #82A1B3;
+  border: solid #476576;
+  padding: 1.5vh 2.5vw;
+  color: #F5F5F5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  font-size: 14px;
+}
+
+.mult-icons > * {
+  margin: 1px;
+}
+
+/*#region Bootstrap simplified stuff*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.col-1 {
+  position: relative;
+  width: 8.33333333%;
+  min-height: 1px;
+  padding-left: 15px;
+}
+
+.col-2 {
+  position: relative;
+  width: 16.66666667%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-3 {
+  position: relative;
+  width: 25%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-4 {
+  position: relative;
+  width: 33.2%;
+  /* min-height: 1px; */
+}
+
+.col-5 {
+  position: relative;
+  width: 41.66666667%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-6 {
+  position: relative;
+  width: 50%;
+  min-height: 1px;
+}
+
+.col-7 {
+  position: relative;
+  width: 58.33333333%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-8 {
+  position: relative;
+  width: 66.66666667%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-9 {
+  position: relative;
+  width: 75%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-10 {
+  position: relative;
+  width: 83.33333333%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-11 {
+  position: relative;
+  width: 91.66666667%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*#endregion */
+
+/*#region Pixelated button*/
+.btn {
+  font-size: 1.2em;
+  font-family: 'Press Start 2P', cursive;
+  width: 100%;
+  height: 70px;
+  background: #fefefe;
+  border: 0px;
+  position: relative;
+  box-shadow: inset -4px 2px 1px 1px #476576, inset -4px -2px 1px 1px #283c47, inset 4px 0px 1px 1px #5b7d91;
+}
+
+  .btn:hover {
+    cursor: pointer;
+    background-color: #82A1B3;
+  }
+
+  .btn:active {
+    top: 5px;
+    box-shadow: -4px 2px 1px 1px #5b7d91, -4px -2px 1px 1px #476576, 4px 0px 1px 1px #476576,
+  }
+
+  .btn::after {
+    content: '';
+    background: black;
+    position: absolute;
+    left: -2.5%;
+    top: 0;
+    width: 105%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .btn::before {
+    content: '';
+    background: black;
+    position: absolute;
+    left: 0;
+    top: -5%;
+    width: 100%;
+    height: 113%;
+    z-index: -1;
+  }
+
+/*#endregion*/
+
+
+/*#region Francisco*/
+::-webkit-scrollbar {
+  overflow-y: scroll;
+  background: #476576;
+  width: 5px;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffff;
+  border-radius: 2px;
+  box-shadow: inset 0 0 5px #82A1B3;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/*#endregion*/
+
+.element-Partition {
+  height: 160px;
+  margin: 10px 0 10px 0;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.padding-b {
+  padding-bottom: 10px
+}

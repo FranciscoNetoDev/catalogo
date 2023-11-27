@@ -1,0 +1,52 @@
+/* #divLateralMenu{
+    background-color: none;
+    height: 40vh;
+    width: 20vw;
+} */
+#cores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border-radius: 8%;
+}
+.Padrao {
+    border: black 1px solid;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(to right, #82A1B3 0%, #82A1B3 33.33%, #fff 33.33%, #fff 66.66%, #476576 66.66%, #476576 100%);
+    width: 5vw;
+    color: #fff;
+    transition: background-position 0.5s;
+    margin-bottom: 4px;
+}
+.Padrao1 {
+    border: black 1px solid;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(to right, #F15F22 0%, #F15F22 33.33%, #000 33.33%, #000 66.66%, #fff 66.66%, #fff 100%);
+    width: 5vw;
+    color: #fff;
+    transition: background-position 0.5s;
+    margin-bottom: 4px;
+}
+
+.Padrao2{
+    border: black 1px solid;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(to right, #1C9D41 0%, #1C9D41 33.33%, #fff 33.33%, #fff 66.66%, #FFE600 66.66%, #FFE600 100%);
+    width: 5vw;
+    color: #fff;
+    transition: background-position 0.5s;
+    margin-bottom: 4px;
+  }

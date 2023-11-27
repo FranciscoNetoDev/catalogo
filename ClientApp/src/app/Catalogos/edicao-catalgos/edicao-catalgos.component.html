@@ -1,0 +1,109 @@
+<div style=" height: 80vh; " cdkDropListGroup>
+
+  <nav class="menu">
+    <div cdkDropList class="itens-list" cdkDropListSortingDisabled>
+
+      <div class="element-box" cdkDrag title="Imagem">
+        <div>
+          <fa-icon [icon]="faImage"></fa-icon>
+        </div>
+      </div>
+
+      <div class="element-box" cdkDrag title="Uma partição">
+        <div>
+          <fa-icon [icon]="faSquare"></fa-icon>
+        </div>
+      </div>
+
+      <div class="element-box" cdkDrag title="Duas partições">
+
+        <div class="mult-icons">
+          <fa-icon [icon]="faSquare"></fa-icon>
+          <fa-icon [icon]="faSquare"></fa-icon>
+        </div>
+      </div>
+
+      <div class="element-box" cdkDrag title="Três partições">
+        <div class="mult-icons">
+          <fa-icon [icon]="faSquare"></fa-icon>
+          <fa-icon [icon]="faSquare"></fa-icon>
+          <fa-icon [icon]="faSquare"></fa-icon>
+        </div>
+      </div>
+
+      <div class="element-box" cdkDrag title="Quatro partições">
+        <div class="mult-icons">
+          <fa-icon [icon]="faSquare"></fa-icon>
+          <fa-icon [icon]="faSquare"></fa-icon>
+          <fa-icon [icon]="faSquare"></fa-icon>
+          <fa-icon [icon]="faSquare"></fa-icon>
+        </div>
+      </div>
+      <div style="border: solid 1px #ccc;margin-top: 4px; margin-bottom: 10px;">
+        <p style="text-align: center; margin-bottom: 0;font-size: 13px;margin-top: 15px;">Tema Padrão</p>
+        <div id="cores">
+          <button class="Padrao" (click)="padraoCor(0)">
+          </button>
+        </div>
+        <p style="text-align: center; margin-bottom: 0;font-size: 13px;">Opcionais</p>
+        <div id="cores" style="margin-bottom: 15px;">
+          <button class="Padrao1" (click)="padraoCor(1)">
+          </button>
+          <button class="Padrao2" (click)="padraoCor(2)">
+          </button>
+        </div>
+      </div>
+      <button (click)="limparUltimoCampo()" style="margin-bottom: 2vh;margin-top: 2vh;margin-left: 8px;"> <fa-icon
+          [icon]="faEraser"></fa-icon></button>
+      <button (click)="limparCampos()" style="margin-bottom: 2vh;margin-top: 2vh;margin-left: 8px; width: 134px;">
+        Resetar </button>
+      <button (click)="geraCatologo()" style="margin-bottom: 2vh;margin-left: 8px;"> <fa-icon
+          [icon]="faFilePdf"></fa-icon> Download</button>
+    </div>
+
+  </nav>
+  <div style="padding-bottom: 5vh;">
+    <div cdkDropList [cdkDropListData]="design_zone" class="element-box-workspace" (cdkDropListDropped)="drop($event)"
+      style="padding-bottom: 30px;" id="workspace-data">
+      <div *ngFor="let item of design_zone" [cdkDragDisabled]="true" cdkDrag>
+        <app-image-upload *ngIf="item.name == 'Imagem'" [index]="item.ID"
+          (fileSelected)="onFileSelected($event)"></app-image-upload>
+
+        <div *ngIf="item.name == 'Uma partição'" class="row padding-b">
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="1"
+            class="col-12"></app-catalogo-variables>
+        </div>
+
+        <div *ngIf="item.name == 'Duas partições'" class="row padding-b">
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="2"
+            class="col-6"></app-catalogo-variables>
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="2"
+            class="col-6"></app-catalogo-variables>
+        </div>
+
+        <div *ngIf="item.name == 'Três partições'" class="row padding-b">
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="3"
+            class="col-4"></app-catalogo-variables>
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="3"
+            class="col-4"></app-catalogo-variables>
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="3"
+            class="col-4"></app-catalogo-variables>
+        </div>
+
+        <div *ngIf="item.name == 'Quatro partições'" class="row padding-b">
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="4"
+            class="col-3"></app-catalogo-variables>
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="4"
+            class="col-3"></app-catalogo-variables>
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="4"
+            class="col-3"></app-catalogo-variables>
+          <app-catalogo-variables [index]="item.ID" [padraoCor]="padraoCorEscolhida" [partitionCount]="4"
+            class="col-3"></app-catalogo-variables>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
